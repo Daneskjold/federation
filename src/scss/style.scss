@@ -4,7 +4,24 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+@use 'blocks/header';
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-family: 'DIN Pro', sans-serif;
+    font-weight: 400;
+    color: var(--blue);
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: var(--blue);
+    &:hover {
+        color: var(--blue);
+        text-decoration: none;
+    }
 }
