@@ -5,6 +5,7 @@
 @use 'base/mixins' as m;
 
 @use 'blocks/header';
+@use 'blocks/main';
 
 body {
     font-family: 'DIN Pro', sans-serif;
