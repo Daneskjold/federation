@@ -1,7 +1,31 @@
 @use '../base/mixins' as m;
 
 .main {
-    background-image: url(../img/main-bg.jpg);
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: url("../img/main-bg.jpg") no-repeat center / cover;
     height: 100vh;
-}
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 70% 100%, 0 90%);
 
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(33, 56, 117, 0.35);
+        z-index: -2;
+    }
+
+    .title {
+        font-size: 74px;
+        line-height: 74px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 -14px 60px var(--blue);
+    }
+}
