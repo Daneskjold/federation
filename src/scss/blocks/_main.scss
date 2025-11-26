@@ -1,26 +1,29 @@
 @use '../base/mixins' as m;
 
 .main {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
+    min-height: 100vh;
     background: url("../img/main-bg.jpg") no-repeat center / cover;
-    height: 100vh;
-    z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 70% 100%, 0 90%);
 
-    &:before {
-        position: absolute;
+    &::before {
         content: '';
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgb(33, 56, 117, 0.35);
-        z-index: -2;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(33, 56, 117, 0.35);
     }
 
-    .title {
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #fff;
+        clip-path: polygon(0 90%, 70% 100%, 100% 90%, 100% 100%, 0 100%);
+    }
+
+    &__title {
+        position: relative;
         font-size: 74px;
         line-height: 74px;
         text-transform: uppercase;

@@ -46,8 +46,8 @@
         position: relative;
 
         &::before {
-            position: absolute;
             content: '';
+            position: absolute;
             bottom: -1px;
             width: 0;
             left: 0;
