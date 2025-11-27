@@ -8,6 +8,11 @@
 @use 'blocks/main';
 @use 'blocks/title';
 @use 'blocks/about';
+@use 'blocks/partners';
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'DIN Pro', sans-serif;
