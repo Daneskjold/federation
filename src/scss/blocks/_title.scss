@@ -8,5 +8,9 @@
         line-height: 33px;
         margin-bottom: 50px;
     }
+
+    &--h3 {
+        @include m.text-fz12bold;
+    }
 }
 

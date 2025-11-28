@@ -2,5 +2,19 @@
 
 .partners {
     padding-top: 60px;
-    
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    &__link {
+        display: block;
+        transition: transform .2s ease;
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
 }
