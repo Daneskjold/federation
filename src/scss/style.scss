@@ -9,6 +9,7 @@
 @use 'blocks/title';
 @use 'blocks/about';
 @use 'blocks/partners';
+@use 'blocks/footer';
 
 html {
     scroll-behavior: smooth;
@@ -37,6 +38,7 @@ html, body {
 }
 // Прижатый футер конец
 a {
+    display: inline-block;
     color: var(--blue);
     &:hover {
         color: var(--blue);

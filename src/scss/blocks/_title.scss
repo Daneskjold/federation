@@ -12,5 +12,10 @@
     &--h3 {
         @include m.text-fz12bold;
     }
-}
 
+    &--h4 {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}

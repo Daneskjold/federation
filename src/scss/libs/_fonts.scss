@@ -37,3 +37,13 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../fonts/DINPro-Black.eot');
+    src: url('../fonts/DINPro-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DINPro-Black.woff') format('woff'),
+    url('../fonts/DINPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    }
