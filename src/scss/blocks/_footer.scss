@@ -68,18 +68,26 @@
         margin-top: 20px;
     }
 
-    &__email {
+    &__email,
+    &__tel {
         color: #fff;
         margin-top: 20px;
+        transition: color .1s;
+
+        &:hover {
+            color: #015dac;
+        }
     }
+
     &__conection {
         width: 50%;
         padding-left: 10px;
         margin-top: 20px;
     }
 
-    &__tel {
-        color: #fff;
-        margin-top: 20px;
+    &__map {
+        iframe {
+            border: none;
+        }
     }
 }
