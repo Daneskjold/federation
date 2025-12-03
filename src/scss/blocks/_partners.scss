@@ -1,7 +1,7 @@
 @use '../base/mixins' as m;
 
 .partners {
-    padding-top: 60px;
+    padding: 60px 0;
 
     &__wrapper {
         display: flex;
