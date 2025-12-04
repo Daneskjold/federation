@@ -28,6 +28,7 @@
         border-radius: 50%;
         border: 2px solid #e4c4c0;
         color: #e4c4c0;
+        transition: border-color 0.3s;
 
         &::before {
             position: absolute;
@@ -37,16 +38,16 @@
             border-radius: 50%;
             transform: scale(0);
             opacity: 0;
-            transition: all .3s;
+            transition: transform .3s;
+        }
+
+        svg {
+            position: relative;
         }
 
         &:hover {
             border-color: #fff;
             color: var(--blue);
-
-            svg {
-                position: absolute;
-            }
 
             &::before {
                 transform: scale(1.1);
@@ -57,9 +58,11 @@
 
     &__contact-wrapper {
         display: flex;
+        gap: 20px;
     }
 
-    &__address {
+    &__address,
+    &__connection {
         width: 50%;
         margin-top: 20px;
     }
@@ -79,9 +82,4 @@
         }
     }
 
-    &__connection {
-        width: 50%;
-        padding-left: 10px;
-        margin-top: 20px;
-    }
 }
