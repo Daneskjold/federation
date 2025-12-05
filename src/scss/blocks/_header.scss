@@ -1,26 +1,24 @@
 @use '../base/mixins' as m;
 
 .header {
-    width: 100%;
-    height: 60px;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid var(--border-gray);
-    background-color: #fff;
     z-index: 1;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-gray);
 
     &__nav {
-        height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
+        height: 100%;
     }
 
     &__menu {
+        display: flex;
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(1px, auto));
-        justify-items: center;
     }
 
     &__menu-item {
@@ -29,14 +27,15 @@
         height: 100%;
         width: 100%;
         @include m.text-fz12bold;
-    }
-
-    &__menu--right &__menu-item {
-        border-left: 1px solid var(--border-gray);
+        padding: 0 10px;
     }
 
     &__menu--left &__menu-item {
         border-right: 1px solid var(--border-gray);
+    }
+
+    &__menu--right &__menu-item {
+        border-left: 1px solid var(--border-gray);
     }
 
     &__menu-link {
@@ -46,23 +45,22 @@
             content: '';
             position: absolute;
             bottom: -1px;
-            width: 0;
             left: 0;
+            width: 0;
             height: 1px;
             background-color: var(--blue);
             transition: width .5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        &:hover {
-            &::before {
-                width: 100%;
-            }
+        &:hover::before {
+            width: 100%;
         }
-
     }
 
     &__logo {
+        justify-self: center;
         transition: transform .2s ease;
+
         &:hover {
             transform: scale(0.85);
         }
