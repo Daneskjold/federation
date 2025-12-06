@@ -5,7 +5,7 @@
 @use 'base/mixins' as m;
 
 @use 'blocks/header';
-@use 'blocks/name';
+@use 'blocks/hero';
 @use 'blocks/title';
 @use 'blocks/about';
 @use 'blocks/partners';
@@ -47,5 +47,6 @@ a {
 }
 
 .container {
+    margin: 0 auto;
     padding: 0px 60px;
 }

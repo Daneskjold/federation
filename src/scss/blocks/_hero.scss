@@ -1,10 +1,11 @@
 @use '../base/mixins' as m;
 
-.name {
+.hero {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
+    width: 100%;
     background: url("../img/main-bg.jpg") no-repeat center / cover;
 
     &::before {
@@ -30,5 +31,7 @@
         text-align: center;
         color: #fff;
         text-shadow: 0 -14px 60px var(--blue);
+        font-family: 'DIN Pro Condensed';
+        font-weight: 400;
     }
 }
