@@ -8,30 +8,28 @@
     width: 100%;
     background: url("../img/main-bg.jpg") no-repeat center / cover;
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-color: rgba(33, 56, 117, 0.35);
-    }
-
+    &::before,
     &::after {
         content: '';
         position: absolute;
         inset: 0;
+    }
+
+    &::before {
+        background-color: rgba(33, 56, 117, 0.35);
+    }
+
+    &::after {
         background-color: #fff;
         clip-path: polygon(0 90%, 70% 100%, 100% 90%, 100% 100%, 0 100%);
     }
 
     &__title {
         position: relative;
-        font-size: 74px;
-        line-height: 74px;
         text-transform: uppercase;
         text-align: center;
         color: #fff;
         text-shadow: 0 -14px 60px var(--blue);
-        font-family: 'DIN Pro Condensed';
-        font-weight: 400;
+        font: 400 74px/1 'DIN Pro Condensed', san-serif;
     }
 }

@@ -5,8 +5,8 @@
 
     &__link {
         position: relative;
-        overflow-x: hidden;
         display: inline-block;
+        overflow-x: hidden;
         vertical-align: bottom;
         transition: color .5s;
 
@@ -19,7 +19,7 @@
             width: 100%;
             height: 1px;
             background-color: var(--blue);
-            transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: transform 2s cubic-bezier(.19, 1, .22, 1);
         }
 
         &::before {
@@ -41,5 +41,4 @@
 
         }
     }
-
 }
