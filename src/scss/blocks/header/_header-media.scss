@@ -1,0 +1,19 @@
+@media (max-width:715px) {
+    .header {
+        &__menu {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
+        }
+
+        &__nav {
+            grid-template-columns: auto 80px;
+        }
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}

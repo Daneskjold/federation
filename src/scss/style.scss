@@ -4,12 +4,14 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-@use 'blocks/header';
+@use 'blocks/header/header';
 @use 'blocks/hero';
 @use 'blocks/title';
 @use 'blocks/about';
 @use 'blocks/partners';
 @use 'blocks/footer';
+
+@use 'blocks/header/header-media';
 
 html {
     scroll-behavior: smooth;
