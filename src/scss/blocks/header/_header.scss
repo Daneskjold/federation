@@ -43,21 +43,23 @@
 
     &__menu-link {
         position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: var(--blue);
-            transition: width .5s cubic-bezier(0.19, 1, 0.22, 1);
+        span {
+            background: linear-gradient(var(--blue), var(--blue)) 0 100% / 0 1px no-repeat;
+            transition: background-size .5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        &:hover::before {
-            width: 100%;
+        &:hover {
+            span {
+                background-size: 100% 1px;
+            }
         }
+
     }
 
     &__logo {
@@ -116,8 +118,6 @@
         display: none;
     }
 
-    &.active {}
-
     // кнопка меню (бургер) конец
 }
 
@@ -146,12 +146,25 @@
         border-top: 1px solid var(--border-gray);
     }
 
-    &__item {
+    &__link {
+        position: relative;
+        width: 100%;
         padding: 14px 10px;
         text-transform: uppercase;
         letter-spacing: 0.8px;
         font-size: 14px;
         border-bottom: 1px solid var(--border-gray);
+
+        span {
+            background: linear-gradient(var(--blue), var(--blue)) 0% 100% / 0% 1px no-repeat;
+            transition: background-size .5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        &:hover {
+            span {
+                background-size: 100% 1px;
+            }
+        }
     }
 }
 

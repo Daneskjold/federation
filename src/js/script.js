@@ -10,3 +10,11 @@ hamburger.addEventListener('click', () => {
         line.classList.toggle('active');
     });
 });
+
+mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    label.classList.toggle('active');
+    lines.forEach(line => {
+        line.classList.toggle('active');
+    });
+});
