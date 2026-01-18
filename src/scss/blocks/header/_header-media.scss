@@ -1,4 +1,4 @@
-@media (max-width:715px) {
+@media (max-width: 715px) {
     .header {
         &__menu {
             display: none;
@@ -16,4 +16,19 @@
     .mobile-menu {
         display: block;
     }
+}
+
+@media (hover: none) {
+    .header {
+        &__logo:hover {
+            transform: none;
+        }
+
+        &__menu-link:hover {
+            span {
+                background-size: 0;
+            }
+        }
+    }
+
 }

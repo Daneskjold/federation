@@ -5,13 +5,18 @@
 @use 'base/mixins' as m;
 
 @use 'blocks/header/header';
-@use 'blocks/hero';
+@use 'blocks/container';
+@use 'blocks/hero/hero';
+@use 'blocks/about/about';
 @use 'blocks/title';
-@use 'blocks/about';
-@use 'blocks/partners';
-@use 'blocks/footer';
+@use 'blocks/partners/partners';
+@use 'blocks/footer/footer';
 
 @use 'blocks/header/header-media';
+@use 'blocks/hero/hero-media';
+@use 'blocks/about/about-media';
+@use 'blocks/partners/partners-media';
+@use 'blocks/footer/footer-media';
 
 html {
     scroll-behavior: smooth;
@@ -25,7 +30,8 @@ body {
 }
 
 // Прижатый футер начало
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -38,17 +44,21 @@ html, body {
 .main {
     flex-grow: 1;
 }
+
 // Прижатый футер конец
 a {
     display: inline-block;
     color: var(--blue);
+
     &:hover {
         color: var(--blue);
         text-decoration: none;
     }
 }
 
-.container {
-    margin: 0 auto;
-    padding: 0px 60px;
+// Заглушка для documents.html
+.plug {
+    font-size: 60px;
+    text-align: center;
+    padding-top: 15%;
 }

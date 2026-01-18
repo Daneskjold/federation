@@ -1,0 +1,24 @@
+@media (max-width: 715px) {
+    .about {
+        padding-top: 40px;
+    }
+}
+
+@media (hover: none) {
+    .about {
+        &__link:hover {
+            color: inherit;
+
+            &::before {
+                background-color: inherit;
+                transform: none;
+            }
+
+            &::after {
+                background-color: inherit;
+                transform: none;
+            }
+
+        }
+    }
+}

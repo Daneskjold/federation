@@ -1,4 +1,4 @@
-@use '../base/mixins' as m;
+@use '../../base/mixins' as m;
 
 .footer {
     background-color: var(--blue);
@@ -6,12 +6,33 @@
     padding: 35px 0;
 
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
+        position: relative;
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 180px 1fr 1fr 30%;
+        grid-template-areas:
+            "social-block contact-block address-block map-block";
     }
 
-    &__block {
-        width: 30%;
+    &__social-block {
+        grid-area: social-block;
+    }
+
+    &__contact-block {
+        grid-area: contact-block;
+    }
+
+    &__address-block {
+        grid-area: address-block;
+    }
+
+    &__map-block {
+        position: absolute;
+        top: -35px;
+        right: -60px;
+        bottom: -35px;
+        left: 0;
+        grid-area: map-block;
     }
 
     &__icons {
@@ -21,13 +42,13 @@
     &__link {
         position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: 37px;
         height: 37px;
-        border-radius: 50%;
-        border: 2px solid #e4c4c0;
         color: #e4c4c0;
+        border: 2px solid #e4c4c0;
+        border-radius: 50%;
         transition: border-color 0.3s;
 
         &::before {
@@ -36,13 +57,14 @@
             inset: 0;
             background: #fff;
             border-radius: 50%;
-            transform: scale(0);
             opacity: 0;
+            transform: scale(0);
             transition: transform .3s;
         }
 
         svg {
             position: relative;
+            z-index: 1;
         }
 
         &:hover {
@@ -56,30 +78,28 @@
         }
     }
 
-    &__contact-wrapper {
-        display: flex;
-        gap: 20px;
+    &__contact-info {
+        width: 155px;
     }
 
-    &__address,
-    &__connection {
-        width: 50%;
+    &__address-text {
         margin-top: 20px;
     }
 
-    &__text {
+    &__address-email,
+    &__contact-phone {
+        display: block;
         margin-top: 20px;
-    }
-
-    &__email,
-    &__phone {
         color: #fff;
-        margin-top: 20px;
         transition: color .1s;
 
         &:hover {
             color: #015dac;
         }
+    }
+
+    &__address-index {
+        display: block;
     }
 
 }

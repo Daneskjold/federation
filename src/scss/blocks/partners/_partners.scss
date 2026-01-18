@@ -1,4 +1,4 @@
-@use '../base/mixins' as m;
+@use '../../base/mixins' as m;
 
 .partners {
     padding: 60px 0;
@@ -14,8 +14,10 @@
     &__link {
         display: block;
         transition: transform .2s ease;
+
         &:hover {
             transform: scale(0.9);
         }
     }
+
 }

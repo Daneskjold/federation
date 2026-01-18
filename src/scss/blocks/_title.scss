@@ -3,7 +3,7 @@
 .title {
     font-weight: 700;
 
-    &--size-h2 {
+    &--about, &--partners {
         font-size: 24px;
         line-height: 33px;
         margin-bottom: 50px;
@@ -17,5 +17,33 @@
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
+    }
+
+    &__contact-info {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .title{
+        &--about {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 1095px) {
+    .title{
+        &--partners {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 515px) {
+    .title{
+        &--partners {
+            margin-bottom: 40px;
+        }
     }
 }

@@ -1,0 +1,17 @@
+@media (max-width: 715px) {
+
+    .hero {
+        &__title {
+            font-size: 54px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero {
+        &__title {
+            font-size: 37px;
+        }
+    }
+}
