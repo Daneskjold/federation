@@ -68,6 +68,7 @@ function building() {
     return src([
         'src/css/style.min.css',
         'src/js/script.min.js',
+        'src/icons/**/*',
         'src/img/*.*',
         'src/fonts/*.*',
         'src/**/*.html'
